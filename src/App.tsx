@@ -1,26 +1,18 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Suspense } from 'react'
+import { RouterProvider } from 'react-router-dom'
+import { ThemeProvider } from 'styled-components'
+import { router } from '../src/globalConfig/router'
+import { customTheme } from './globalConfig/customTheme'
+import LoadingIndicator from './components/LoadingIndicator/LoadingIndicator'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeProvider theme={customTheme}>
+      <Suspense fallback={<LoadingIndicator />}>
+        <RouterProvider router={router} />
+      </Suspense>
+    </ThemeProvider>
   );
 }
 
-export default App;
+export default App
