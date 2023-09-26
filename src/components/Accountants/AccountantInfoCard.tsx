@@ -21,7 +21,7 @@ const AccountantInfoCard = ({ accountant }: IAccountantInfoCard) => {
       <FlexBox>
         <AccountantProfileIcon src={accountant.picture.medium} alt="thumbnail" />
         <CustomBox $margin="0 0 0 16px">
-          <InfoParagraph color={customTheme.colors.gray}>Twoja księgowa</InfoParagraph>
+          <InfoParagraph color={customTheme.colors.gray}>Twoja księgowa/księgowy</InfoParagraph>
           <InfoParagraph
             fontSize={customTheme.fontSize.lg}
             fontWeight={700}
