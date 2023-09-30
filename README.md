@@ -1,6 +1,6 @@
-# Getting Started with Create React App
+# Goal
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was done for the purpose of interacting with the API and creating a corresponding UI.
 
 ## Available Scripts
 
